@@ -2760,6 +2760,7 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.70 dev eth1
     exit 0
 </entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.69" netPrefixLenV4="30"/>
     </node>
@@ -2825,6 +2826,7 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.74 dev eth1
     exit 0
 </entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.73" netPrefixLenV4="30"/>
     </node>
@@ -2890,6 +2892,7 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.54 dev eth1
     exit 0
 </entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.53" netPrefixLenV4="30"/>
     </node>
