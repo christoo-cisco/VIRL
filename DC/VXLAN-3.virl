@@ -11,7 +11,7 @@
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:12 2018
+!Time: Tue Mar 27 16:16:03 2018
 
 version 7.0(3)I6(1)
 hostname Spine-1
@@ -229,7 +229,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.211/16
+  ip address 10.255.0.224/16
 
 interface loopback0
   description Loopback
@@ -285,7 +285,7 @@ router bgp 65000
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:14 2018
+!Time: Tue Mar 27 16:16:02 2018
 
 version 7.0(3)I6(1)
 hostname Spine-2
@@ -505,7 +505,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.206/16
+  ip address 10.255.0.225/16
 
 interface loopback0
   description Loopback
@@ -561,7 +561,7 @@ router bgp 65000
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:12 2018
+!Time: Tue Mar 27 16:16:02 2018
 
 version 7.0(3)I6(1)
 hostname Leaf-1
@@ -642,7 +642,7 @@ vrf context management
 hardware forwarding unicast trace
 vpc domain 1
   peer-switch
-  peer-keepalive destination 10.255.0.202 source 10.255.0.201
+  peer-keepalive destination 10.255.0.221 source 10.255.0.220
   peer-gateway
   ip arp synchronize
 
@@ -695,7 +695,7 @@ interface Vlan3000
   no shutdown
   ip address 10.3.1.1/30
   ip ospf network point-to-point
-  ip router ospf UNDERLAY area 0.0.0.0
+  ip router ospf 1 area 0.0.0.0
   ip pim sparse-mode
 
 interface port-channel1
@@ -882,7 +882,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.201/16
+  ip address 10.255.0.220/16
 
 interface loopback0
   description Loopback
@@ -952,7 +952,7 @@ evpn
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:13 2018
+!Time: Tue Mar 27 16:16:01 2018
 
 version 7.0(3)I6(1)
 hostname Leaf-2
@@ -1033,7 +1033,7 @@ vrf context management
 hardware forwarding unicast trace
 vpc domain 1
   peer-switch
-  peer-keepalive destination 10.255.0.201 source 10.255.0.202
+  peer-keepalive destination 10.255.0.220 source 10.255.0.221
   peer-gateway
   ip arp synchronize
 
@@ -1086,7 +1086,7 @@ interface Vlan3000
   no shutdown
   ip address 10.3.1.2/30
   ip ospf network point-to-point
-  ip router ospf UNDERLAY area 0.0.0.0
+  ip router ospf 1 area 0.0.0.0
   ip pim sparse-mode
 
 interface port-channel1
@@ -1271,7 +1271,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.202/16
+  ip address 10.255.0.221/16
 
 interface loopback0
   description Loopback
@@ -1340,7 +1340,7 @@ evpn
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:12 2018
+!Time: Tue Mar 27 16:16:04 2018
 
 version 7.0(3)I6(1)
 hostname Leaf-3
@@ -1587,7 +1587,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.203/16
+  ip address 10.255.0.222/16
 
 interface loopback0
   ip address 10.0.0.5/32
@@ -1648,7 +1648,7 @@ evpn
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:12 2018
+!Time: Tue Mar 27 16:16:02 2018
 
 version 7.0(3)I6(1)
 hostname Leaf-4
@@ -1949,7 +1949,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.204/16
+  ip address 10.255.0.223/16
 
 interface loopback0
   description Loopback
@@ -2029,7 +2029,7 @@ evpn
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:32:55 UTC Mon Mar 26 2018
+! Last configuration change at 16:10:51 UTC Tue Mar 27 2018
 !
 version 16.6
 service timestamps debug datetime msec
@@ -2152,7 +2152,7 @@ crypto pki certificate chain TP-self-signed-2589134416
 !
 !
 !
-license udi pid CSR1000V sn 9S1O83QW3SU
+license udi pid CSR1000V sn 9X6VID4KXEX
 license accept end user agreement
 license boot level ax
 diagnostic bootup level minimal
@@ -2195,7 +2195,7 @@ interface Loopback0
 interface GigabitEthernet1
  description OOB Management
  vrf forwarding Mgmt-intf
- ip address 10.255.0.207 255.255.0.0
+ ip address 10.255.0.226 255.255.0.0
  negotiation auto
  no mop enabled
  no mop sysid
@@ -2256,8 +2256,6 @@ router ospf 1
  router-id 10.0.0.7
  redistribute static subnets
  passive-interface Loopback0
- network 10.10.10.16 0.0.0.3 area 0
- network 172.21.1.0 0.0.0.255 area 0
  network 192.168.0.5 0.0.0.0 area 0
 !
 !
@@ -2493,7 +2491,7 @@ write_files:
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!Command: show running-config
-!Time: Mon Mar 26 21:46:14 2018
+!Time: Tue Mar 27 16:16:02 2018
 
 version 7.0(3)I6(1)
 hostname nx-osv-1
@@ -2682,7 +2680,7 @@ interface Ethernet1/64
 interface mgmt0
   description OOB Management
   vrf member management
-  ip address 10.255.0.209/16
+  ip address 10.255.0.227/16
 
 interface loopback0
   description Loopback
@@ -2700,7 +2698,8 @@ line vty
     </node>
     <node name="C1-server2-vl140" type="SIMPLE" subtype="server" location="178,403">
         <extensions>
-            <entry key="config" type="string">#cloud-config
+            <entry key="Auto-generate config" type="Boolean">false</entry>
+            <entry key="config" type="String">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
 hostname: C1-server2-vl140
@@ -2760,13 +2759,13 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.70 dev eth1
     exit 0
 </entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.69" netPrefixLenV4="30"/>
     </node>
     <node name="C2-server1-vl240" type="SIMPLE" subtype="server" location="276,403">
         <extensions>
-            <entry key="config" type="string">#cloud-config
+            <entry key="Auto-generate config" type="Boolean">false</entry>
+            <entry key="config" type="String">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
 hostname: C2-server1-vl240
@@ -2826,13 +2825,13 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.74 dev eth1
     exit 0
 </entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.73" netPrefixLenV4="30"/>
     </node>
     <node name="C2-ExUSR-L2" type="SIMPLE" subtype="server" location="800,144">
         <extensions>
-            <entry key="config" type="string">#cloud-config
+            <entry key="Auto-generate config" type="Boolean">false</entry>
+            <entry key="config" type="String">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
 hostname: C2-ExUSR-L2
@@ -2892,7 +2891,6 @@ write_files:
     route add -net 10.0.0.8/31 gw 10.100.100.54 dev eth1
     exit 0
 </entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="10.100.100.53" netPrefixLenV4="30"/>
     </node>
